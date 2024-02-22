@@ -141,110 +141,47 @@ Questions to ask before starting with dashboard
   After the project kick off meetings, the data engineering team has given the data as per the request of data analytics team, let’s explore them.
 
 
-Dataset Understanding.
-----------------------------------------------------------------
+Key Achievements
+----------------------------------------------------------------------
 
-Understanding what data is available will be more helpful while doing analysis. before jumping on to the analysis get good understanding of what are data available.
+1. Customized Dashboard: Developed a multi-functional Power BI dashboard to specifically meet AtliQ Hardware's needs, allowing them to gain insights into their various departments.
 
-Dimension table : It will have the static data like details of customer and products
+    2. Data Integration: Data was sourced from disparate locations, including Excel/CSV files and a MySQL database, and seamlessly integrated into Power BI for comprehensive analysis.
 
-Fact table : It will have the data about the transactions
+    3. Data Model and Visualizations: A robust data model was developed within Power BI, enabling the creation of visually appealing and interactive visualizations to represent key performance indicators (KPIs).
 
-* gdb041:
+    4. Performance Optimization: The dashboard's performance was significantly improved using DAX Studio, resulting in a 5% increase in report efficiency.
 
-     dim_customer
-
-               27 distinct markets (ex India, USA, spain)
-
-               75 distinct customers thorough out the market
-
-               2 types of platforms
-
-                       Brick & Motors - Physical/offline store
-
-                       E-commerce - Online Store (Amazon, flipkart)
-
-             Three channels
-
-                       Retailer
-
-                       Direct
-
-                       Distributors
+    5. Data-Driven Decisions: AtliQ Hardware can now analyze trends across different departments, empowering them to make data-driven decisions.
 
 
-      dim_market
+
+Data Sources
+---------------------------------------------------------
+
+The dashboard gathers data from two primary sources:
+
+    1. Excel/CSV Files: Targets and Market Share data and related information are sourced from Excel and CSV files.
+
+    2. MySQL Database: Facts and Dimension for all departments are retrieved from a MySQL database.
 
 
-               27 distinct markets (ex India, USA, spain)
 
-               7 sub-zones
+Performance Optimization
+-------------------------------------------------------------
 
-               4 regions
-
-                      APAC
-
-                      EU
-
-                      nan
-
-                      LATAM
-
-      dim_product
+I have optimized the dashboard's performance using DAX Studio, resulting in a 5% increase in report efficiency. This optimization ensures a seamless experience while exploring the data and visualizations.
 
 
-                Divisions|
 
-                       P & A
+              
 
-                       PC
+                     
 
-                       N & S
-
-
-    fact_forecast_monthly
-
-	
-       This table is used to forecast the customer’s need in advance, which can help in
-
-          Higher customer satisfaction
-
-         Reduced cost in warehouses for storage purpose
-
-         The table is denormalized by data engineering team, as it is a data warehouse which is aimed to be used for analytical work.
-
-          All the date of the month will be replaced by the start date of the month
-
-            It will have all the column names and in the end it will have the forecast quantity need of the customer
-
-    fact_sales_monthly
+                    
+                      
+           
+                
 
 
-            This table is more or less is same as fact_forecase_monthly table, but the last column has the value of sold quantity instead of forecast value.
-* gdb056
-
-
-    freight_cost
-
-
-           This table has details of travel cost and other cost for each market with fiscal year
-
-    gross_price
-
-
-                Has the details of gross prices with product code
-
-    manufacturing_cost
-
-
-                Has the details of manufacturing cost with product code with year
-
-     Pre_invoice_dedutions
-
-
-              Has the details of pre invoice deductions percentage for each cutomer with year
-
-     Post_invoice_deductions
-
-
-              Post invoice deductions and other deductions details
+            
